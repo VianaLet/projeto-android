@@ -55,18 +55,22 @@ header> p.header {
 }
 nav{
     background-color: var(--cor5);
-    
     padding: 10px;
     box-shadow: 0px 7px 7px 3px rgba(0, 0, 0, 0.295)
 }
-nav>a{
+nav>ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;  
+}
+nav a{
     color: var(--cor1);
     font-weight: bold;
     text-decoration: none;
     padding: 10px;      /* Estou usando o padding aqui para dar uma separadinha no menu */
-
+    
 }
-nav>a:hover{
+nav a:hover{
     background-color: var(--cor2);
     color: var(--cor5);
     border-radius: 5px;
