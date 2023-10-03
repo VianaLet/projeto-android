@@ -1,0 +1,178 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+}
+
+:root{ /* Isso aqui é para conseguirmos usar variáveis, sempre colocar -- antes de criar o nome da variável */
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+    
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', sans-serif;
+    --fonte-android: 'Android', cursive; 
+}
+*{ /* Aqui vamos tirar as margens e os paddings de todos os elementos desse css, pois é uma regra global */
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+    background-color: var(--cor0);  /* Para chamar a variável é só colocar o var na frente */
+    font-family: var(--fonte-padrao);
+}
+header{
+    background-color: var(--cor4);
+    padding-top: 40px; 
+    text-align: center;
+    background-image: linear-gradient(to bottom,var(--cor3), var(--cor5));
+}
+
+header > h1{
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 7px 6px 7px rgba(0, 0, 0, 0.438);
+
+}
+header> p.header {
+    color: white;
+    font-size: 1.2em;
+    width: 100%;
+    margin: auto; /* Aqui colocamos margin auto porque quando definimos a largura da caixa ele se tornou um block e o text-align não centraliza mais */
+    text-indent: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    text-shadow: 7px 6px 7px rgba(0, 0, 0, 0.438);
+}
+nav{
+    background-color: var(--cor5);
+    
+    padding: 10px;
+    box-shadow: 0px 7px 7px 3px rgba(0, 0, 0, 0.295)
+}
+nav>a{
+    color: var(--cor1);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;      /* Estou usando o padding aqui para dar uma separadinha no menu */
+
+}
+nav>a:hover{
+    background-color: var(--cor2);
+    color: var(--cor5);
+    border-radius: 5px;
+    transition: .6s; /* Aqui vai demorar um segundo para fazer a animação */
+    
+}
+main{
+    background-color: white;
+    min-width: 300px;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+main img.imgbugdroid{
+    max-width: 350px;
+    display: block; /* Aqui vamos mudar o display para block, aí sim conseguiremos centralizar a imagem com o margin:auto; */
+    margin: auto;
+    
+}
+main h1{
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+}
+main h2{
+    color: var(--cor4);
+    font-family: var(--fonte-android);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 10px;
+}
+img{
+    width: 100%; /* Só de colocar essa declaração conseguimos deixa a imagem responsiva com o site, ocupando toda a caixa pai dela */
+    
+}
+main p{
+    text-align: justify;
+    text-indent: 30px;
+    margin: 15px 0px;
+    font-size: 1em;
+    line-height: 1.8em; /* A altura da linha, espaçamento entre as linhas */
+}
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+}
+main a{
+    text-decoration: none;
+    color: var(--cor5);
+    font-weight: bold;
+    border-radius: 2px;
+    background-color: var(--cor1);
+}
+main a:hover{
+    background-color: var(--cor1);
+    transition: .4s;
+    border-radius: 2px;
+    text-decoration: underline;
+    color: var(--cor4);
+}
+div.video> iframe{
+    width: 100%;
+    margin: auto;
+}
+div.video{
+    background-color: var(--cor4);
+    margin: -20px -20px 10px -20px;
+    padding: 15px;
+
+}
+a.externo::after{
+    content: '\0020\1f517';
+}
+aside{
+    background-color: var(--cor1);
+    border-radius: 10px;
+    padding: 10px;
+}
+aside>h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0 0;
+}
+aside > ul{
+    list-style-type: '\2714\0020\0020'; /* O valor 2714 é ó código referente ao check u+2714 e o 0020 eqyuva a um espaço em branco */
+    list-style-position: inside;
+    columns: 2;
+}
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+footer a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
